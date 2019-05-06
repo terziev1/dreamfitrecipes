@@ -78,27 +78,6 @@ const config = {
   ** - blog posts
   ** - available blog post tags
   */
-  generate: {
-    routes () {
-      return Promise.all([
-        // get all blog posts
-        cdaClient.getEntries({
-          'content_type': ctfConfig.CTF_BLOG_POST_TYPE_ID
-        }),
-        // get the blog post content type
-        cmaClient.getSpace(ctfConfig.CTF_SPACE_ID)
-          .then(space => space.getContentType(ctfConfig.CTF_BLOG_POST_TYPE_ID))
-      ])
-      .then(([entries, postType]) => {
-        return [
-          // map entries to URLs
-          ...entries.items.map(entry => `/blog/${entry.fields.slug}`),
-          // map all possible tags to URLs
-          ...postType.fields.find(field => field.id === 'tags').items.validations[0].in.map(tag => `/tags/${tag}`)
-        ]
-      })
-    }
-  },
 
   /*
   ** Define environment variables being available
