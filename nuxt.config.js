@@ -26,7 +26,7 @@ const config = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
-      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/minireset.css/0.0.2/minireset.min.css' }
+      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/minireset.css/0.0.2/minireset.min.css' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Caveat|Open+Sans:400,700&amp;subset=cyrillic,cyrillic-ext' }
     ]
   },
