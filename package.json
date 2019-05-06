@@ -7,6 +7,7 @@
   "dependencies": {
     "contentful": "^4.3.0",
     "contentful-management": "^3.4.0",
+    "netlify-cli": "^2.11.15",
     "nuxt": "^1.0.0-rc4",
     "vue-markdown": "^2.1.3"
   },
