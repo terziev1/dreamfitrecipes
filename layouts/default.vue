@@ -14,7 +14,7 @@ export default {
 
 <style>
 .main {
-  padding-top: 70px;
+  margin-top: 60px;
 }
 .wrapper{
   max-width: 1184px;

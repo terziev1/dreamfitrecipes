@@ -1,20 +1,9 @@
 <template>
   <div>
-    <header class="blog header">
-      <div class="foreground">
-        <div class="page-bar wrapper">
-          <a href="/" class="person-name">Dreamfitrecipes</a>
-          <Navigation></Navigation>
-        </div>
-        <div class="page-info wrapper">
-          <h2>Blog</h2>
-        </div>
-      </div>
-    </header>
-
+    <Navigation></Navigation>
     <section class="body-container">
       <div class="items-bar wrapper">
-        <h2>All articles ({{ posts.length }})</h2>
+        <h2>Всички рецепти ({{ posts.length }})</h2>
       </div>
       <ul class="items-list wrapper">
         <li class="item" v-for="post in posts">
@@ -50,3 +39,29 @@ export default {
   }
 }
 </script>
+<style>
+h2{
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+h2 b {
+  text-transform: capitalize
+}
+h2 span{
+  font-weight: normal;
+  font-size: 28px;
+}
+.items-bar h2{
+  text-align: center;
+  font-size: 48px;
+  margin: 30px auto;
+}
+.items-list{
+  display: flex;
+}
+.item{
+  padding: 16px;
+  flex-basis: 33%;
+}
+</style>
