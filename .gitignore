@@ -131,7 +131,7 @@ $RECYCLE.BIN/
 .nuxt
 
 # Nuxt generate
-dist
+
 
 # Contentful configs
 .contentful.json
