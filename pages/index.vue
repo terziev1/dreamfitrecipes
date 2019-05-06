@@ -1,22 +1,11 @@
 <template>
   <div>
+    <Navigation></Navigation>
     <header class="home header">
-      <div class="picture">
-        <img :src="person.fields.image.fields.file.url + '?w=1200'">
-      </div>
-      <div class="foreground">
-        <div class="page-bar wrapper">
-          <a href="/" class="person-name">{{ person.fields.name }}</a>
-          <Navigation></Navigation>
-        </div>
         <div class="page-info wrapper">
           <h2>{{ person.fields.title }}</h2>
           <p>{{ person.fields.shortBio }}</p>
-          <ul class="social-icons">
-
-          </ul>
         </div>
-      </div>
     </header>
 
     <section class="body-container">
@@ -72,89 +61,19 @@ export default {
   height: 70vw;
   min-height: 400px;
   max-height: 610px;
-  background: #000;
-  color: #fff;
+  background-color: #2199e8;
 }
 
-.home .person-name:link,
-.home .person-name:visited {
-  color: #fff;
+.items-bar h2{
+  text-align: center;
+  font-size: 48px;
+  margin: 30px auto;
 }
-
-.home .menu a:link,
-.home .menu a:visited {
-  color: #fff;
+.items-list{
+  display: flex;
 }
-
-.home .page-bar {
-  border-bottom: 1px solid #4e4b5f;
+.item{
+  padding: 16px;
+  flex-basis: 33%;
 }
-
-.home .page-info {
-  padding-top: 12%;
-}
-
-.home .page-info h2 {
-  font-size: 1.5em;
-}
-
-.picture {
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  bottom: 0;
-  left: 0%;
-  right: 0;
-  width: 150%;
-}
-
-@media all and (min-width: 600px) {
-  .picture {
-    left: 20%;
-    width: 100%;
-  }
-}
-
-.foreground {
-  overflow: hidden;
-  position: relative;
-  z-index: 3;
-}
-
-.foreground p {
-  margin-bottom: 1em;
-}
-
-@media all and (min-width: 600px) {
-  .foreground p {
-    max-width: 250px;
-  }
-}
-
-.social-icons {
-  margin: 0;
-  padding: 0;
-}
-
-.social-icons li {
-  display: inline-block;
-  margin-right: 1em;
-}
-
-.social-icons a {
-  display: block;
-}
-
-.social-icons svg {
-  display: block;
-  max-width: 100%;
-  fill: #fff;
-  width: 1.5em;
-  height: 1.5em;
-}
-
-.social-icons svg:hover {
-  fill: #2199e8;
-}
-
 </style>

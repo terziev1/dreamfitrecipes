@@ -3,7 +3,7 @@
     <header class="article header">
       <div class="foreground">
         <div class="page-bar wrapper">
-          <a href="/" class="person-name">John Doe</a>
+          <a href="/" class="person-name"></a>
           <Navigation></Navigation>
         </div>
       </div>
