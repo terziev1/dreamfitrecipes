@@ -24,5 +24,6 @@ export default {
   box-sizing: border-box;
   text-decoration: none;
   color: #222;
+  font-family: 'Open Sans', sans-serif;
 }
 </style>

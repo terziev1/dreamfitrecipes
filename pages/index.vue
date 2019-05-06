@@ -2,6 +2,7 @@
   <div>
     <Navigation></Navigation>
     <header class="home header">
+        <img class="headerBackground" :src="person.fields.image.fields.file.url" alt="">
         <div class="page-info wrapper">
           <h2>{{ person.fields.title }}</h2>
           <p>{{ person.fields.shortBio }}</p>
@@ -10,7 +11,7 @@
 
     <section class="body-container">
       <div class="items-bar wrapper">
-        <h2>Recent articles</h2>
+        <h2>Скоро качени</h2>
       </div>
       <ul class="items-list wrapper">
         <li class="item" v-for="post in posts">
@@ -61,9 +62,14 @@ export default {
   height: 70vw;
   min-height: 400px;
   max-height: 610px;
-  background-color: #2199e8;
 }
-
+.headerBackground{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
 .items-bar h2{
   text-align: center;
   font-size: 48px;

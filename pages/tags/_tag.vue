@@ -1,23 +1,12 @@
 <template>
   <div>
-    <header class="tag-page header">
-      <div class="foreground">
-        <div class="page-bar wrapper">
-          <a href="/" class="person-name">John Doe</a>
-          <Navigation></Navigation>
-        </div>
-        <div class="page-info wrapper">
-          <h2>#{{ tag }}</h2>
-        </div>
-      </div>
-    </header>
-
+    <Navigation></Navigation>
     <section class="body-container">
       <div class="items-bar wrapper">
-        <h2>All articles tagged #{{ tag }} ({{ posts.length }})</h2>
+        <h2>Рецепти в категория <b>{{ tag }}</b> <span>({{ posts.length }})</span></h2>
       </div>
       <ul class="items-list wrapper">
-        <li class="item" v-for="post in posts">
+        <li class="item" v-for="(post,i) in posts" :key="i">
           <article-preview :post="post"></article-preview>
         </li>
       </ul>
@@ -51,3 +40,18 @@ export default {
   }
 }
 </script>
+<style scoped>
+h2{
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+h2 b {
+  text-transform: capitalize
+}
+h2 span{
+  font-weight: normal;
+  font-size: 28px;
+}
+</style>
+

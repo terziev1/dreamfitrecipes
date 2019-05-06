@@ -3,10 +3,11 @@
     <div class="wrapper nav">
       <a href="/">DreamFitRecipes</a>
       <ul class="menu">
-        <li v-if="!/\/.*?\/.*/.test(route.path)" v-for="route in this.$router.options.routes">
-          <nuxt-link
-            :to="{ name: route.name }"
-          >{{ route.name.charAt(0).toUpperCase() + route.name.slice(1) }}</nuxt-link>
+        <li>
+          <nuxt-link to="/">Начало</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/blog">Блог</nuxt-link>
         </li>
       </ul>
     </div>
@@ -21,6 +22,7 @@ nav {
   left: 0;
   background: #fff;
   z-index: 99;
+  box-shadow: 0 0px 8px 0px rgba(0,0,0,0.1)
 }
 .nav{
 display: flex;
@@ -32,7 +34,7 @@ display: flex;
   display: flex;
 }
 .menu li {
-  padding: 12px 24px;
+  padding: 12px;
 }
 .menu a {
   text-decoration: none;
