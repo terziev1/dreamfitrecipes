@@ -1,32 +1,33 @@
 <template>
   <div>
-    <Navigation></Navigation>
     <header class="home header">
-        <img class="headerBackground" :src="person.fields.image.fields.file.url" alt="">
-        <div class="page-info wrapper">
-          <h2>{{ person.fields.title }}</h2>
+      <img :src="person.fields.logo.fields.file.url" alt>
+      <Navigation></Navigation>
+    </header>
+    <section class="body-container wrapper">
+
+      <div class="item-list-wrapper">
+        <div class="item-list-container">
+          <h2>Скоро качени</h2>
+          <ul class="items-list ">
+            <li class="item" v-for="(post,i) in posts" :key="i">
+              <article-preview-big :post="post"></article-preview-big>
+            </li>
+          </ul>
+        </div>
+        <div class="page-info">
+          <img :src="person.fields.image.fields.file.url" alt>
           <p>{{ person.fields.shortBio }}</p>
         </div>
-    </header>
-
-    <section class="body-container">
-      <div class="items-bar wrapper">
-        <h2>Скоро качени</h2>
       </div>
-      <ul class="items-list wrapper">
-        <li class="item" v-for="post in posts">
-          <article-preview :post="post"></article-preview>
-        </li>
-      </ul>
     </section>
-
   </div>
 </template>
 
 <script>
-import {createClient} from '~/plugins/contentful.js'
+import { createClient } from '~/plugins/contentful.js'
 import Navigation from '~/components/navigation.vue'
-import ArticlePreview from '~/components/article-preview.vue'
+import ArticlePreviewBig from '~/components/article-preview-big.vue'
 
 const client = createClient()
 
@@ -37,49 +38,86 @@ export default {
         'sys.id': env.CTF_PERSON_ID
       }),
       client.getEntries({
-        'content_type': env.CTF_BLOG_POST_TYPE_ID,
+        content_type: env.CTF_BLOG_POST_TYPE_ID,
         order: '-sys.createdAt'
       })
-    ]).then(([entries, posts]) => {
-      return {
-        person: entries.items[0],
-        posts: posts.items
-      }
-    }).catch(console.error)
+    ])
+      .then(([entries, posts]) => {
+        return {
+          person: entries.items[0],
+          posts: posts.items
+        }
+      })
+      .catch(console.error)
   },
   components: {
     Navigation,
-    ArticlePreview
+    ArticlePreviewBig
   }
 }
 </script>
 
-<style>
-
+<style scoped>
 .home.header {
   overflow: hidden;
   position: relative;
-  height: 70vw;
-  min-height: 400px;
-  max-height: 610px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.headerBackground{
-  position: absolute;
-  width: 100%;
+.home.header img{
   height: 100%;
-  object-fit: cover;
-  z-index: -1;
 }
-.items-bar h2{
-  text-align: center;
-  font-size: 48px;
-  margin: 30px auto;
+.page-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  height: 100%;
+  flex-basis: 40%
 }
-.items-list{
+.page-info p {
+  width: 100%;
+  object-fit: contain;
+}
+.item-list-wrapper{
   display: flex;
 }
-.item{
-  padding: 16px;
-  flex-basis: 33%;
+.item-list-container{
+  flex-basis: 60%;
+}
+
+h2 {
+  font-size: 32px;
+  margin-left: 16px;
+  margin-bottom: 8px;
+}
+.items-list {
+  flex-wrap: wrap;
+  display: flex;
+  padding: 10px;
+}
+.item {
+  flex-basis: 100%;
+  display: flex;
+}
+@media(max-width:640px){
+.item-list-wrapper{
+  flex-wrap: wrap-reverse
+}
+.page-info{
+  flex-basis: 100%;
+  margin-bottom: 30px;
+}
+.item-list-container{
+  flex-basis: 100%;
+}
+.items-list{
+  padding: 10px 0;
+}
+h2{
+  margin-left: 5px;
+}
 }
 </style>

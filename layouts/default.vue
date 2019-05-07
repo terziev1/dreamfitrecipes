@@ -19,6 +19,7 @@ export default {
 .wrapper{
   max-width: 1184px;
   margin:0 auto;
+  padding: 0 16px;
 }
 * {
   box-sizing: border-box;

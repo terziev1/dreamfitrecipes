@@ -1,13 +1,12 @@
 <template>
   <nav role="navigation">
     <div class="wrapper nav">
-      <a href="/">DreamFitRecipes</a>
       <ul class="menu">
         <li>
           <nuxt-link to="/">Начало</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/blog">Блог</nuxt-link>
+          <nuxt-link to="/blog">Всички рецепти</nuxt-link>
         </li>
       </ul>
     </div>
@@ -26,7 +25,7 @@ nav {
 }
 .nav{
 display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   height: 60px;
 }
