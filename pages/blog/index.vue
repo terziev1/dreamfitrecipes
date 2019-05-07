@@ -44,6 +44,7 @@ h2{
   font-size: 32px;
   text-align: center;
   margin-bottom: 40px;
+  padding-top: 40px;
 }
 h2 b {
   text-transform: capitalize
@@ -60,8 +61,21 @@ h2 span{
 .items-list{
   display: flex;
 }
+
 .item{
   padding: 16px;
   flex-basis: 33%;
+}
+@media(max-width:640px){
+  .items-list{
+    flex-wrap: wrap;
+  }
+  .item{
+    flex-basis: 100%;
+    width: 100%;;
+  }
+.items-bar h2{
+    font-size: 28px;
+}
 }
 </style>

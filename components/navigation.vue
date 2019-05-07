@@ -1,6 +1,9 @@
 <template>
   <nav role="navigation">
     <div class="wrapper nav">
+      <a href="/" class="logo">
+      <img src="/logo.png" alt="">
+      </a>
       <ul class="menu">
         <li>
           <nuxt-link to="/">Начало</nuxt-link>
@@ -23,9 +26,19 @@ nav {
   z-index: 99;
   box-shadow: 0 0px 8px 0px rgba(0,0,0,0.1)
 }
+.logo{
+  height: 100%;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo img{
+  height: 100%;
+}
 .nav{
 display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   height: 60px;
 }
