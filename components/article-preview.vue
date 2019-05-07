@@ -45,7 +45,10 @@ export default {
     padding : 1em 0;
     margin-bottom: 2em;
   }
+  .tag{
+    margin-bottom: .5em;
 
+  }
   .tag:link,
   .tag:visited {
     color: #A0A0A0;

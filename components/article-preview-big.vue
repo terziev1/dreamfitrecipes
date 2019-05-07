@@ -82,7 +82,10 @@ article{
     border: 1px solid #A0A0A0;
     margin-right: .5em;
   }
+  .tag{
+    margin-bottom: .5em;
 
+  }
   .tag:active,
   .tag:hover,
   .tag:focus {
