@@ -80,9 +80,14 @@ export default {
 }
 
 .headline h1 {
-  font-size: 3.5em;
+  font-size: 42px
+}
+@media(max-width:640px){
+.headline h1 {
+  font-size: 32px;
 }
 
+}
 .copy {
   padding-bottom: 4em;
 }

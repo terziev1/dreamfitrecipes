@@ -54,6 +54,14 @@ h2 span{
   font-weight: normal;
   font-size: 28px;
 }
+.items-list{
+  display: flex;
+}
+
+.item{
+  padding: 16px;
+  flex-basis: 33%;
+}
 @media(max-width:640px){
   .items-list{
     flex-wrap: wrap;
