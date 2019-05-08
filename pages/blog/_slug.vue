@@ -1,11 +1,9 @@
 <template>
   <div>
-    <header class="article header">
+    <header class="article header small-wrapper wrapper">
           <Navigation></Navigation>
         <img class="main-article-img"
-          :src="post.fields.heroImage.fields.file.url + '?fit=scale&w=350&h=196'"
-          :srcset="`${post.fields.heroImage.fields.file.url}?w=350&h=87&fit=fill 350w, ${post.fields.heroImage.fields.file.url}?w=1000&h=250&fit=fill 1000w, ${post.fields.heroImage.fields.file.url}?w=2000&h=500&fit=fill 2000w`"
-          size="100vw"
+          :src="post.fields.heroImage.fields.file.url"
           :alt="post.fields.heroImage.fields.description">
     </header>
 
@@ -62,6 +60,11 @@ export default {
 
 .foreground .page-bar {
   border-bottom: 0;
+}
+.article.header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .main-article-img{
   min-height: 320px;
