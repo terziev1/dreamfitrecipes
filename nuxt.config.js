@@ -90,12 +90,11 @@ const config = {
           .then(space => space.getContentType(ctfConfig.CTF_BLOG_POST_TYPE_ID))
       ])
       .then(([entries, postType]) => {
-        console.log(postType)
         return [
           // map entries to URLs
           ...entries.items.map(entry => `/blog/${entry.fields.slug}`),
           // map all possible tags to URLs
-          ...postType.fields.find(field => field.id === 'tags').items.validations[0].map(tag => `/tags/${tag}`)
+          ...postType.fields.find(field => field.id === 'tags').validations.map(tag => `/tags/${tag}`)
         ]
       })
     }
