@@ -1,20 +1,12 @@
 <template>
   <div>
     <header class="article header">
-      <div class="foreground">
-        <div class="page-bar wrapper">
-          <a href="/" class="person-name"></a>
           <Navigation></Navigation>
-        </div>
-      </div>
-      <div>
-        <img
+        <img class="main-article-img"
           :src="post.fields.heroImage.fields.file.url + '?fit=scale&w=350&h=196'"
           :srcset="`${post.fields.heroImage.fields.file.url}?w=350&h=87&fit=fill 350w, ${post.fields.heroImage.fields.file.url}?w=1000&h=250&fit=fill 1000w, ${post.fields.heroImage.fields.file.url}?w=2000&h=500&fit=fill 2000w`"
           size="100vw"
-          :alt="post.fields.heroImage.fields.description"
-        >
-      </div>
+          :alt="post.fields.heroImage.fields.description">
     </header>
 
     <section class="body-container">
@@ -71,7 +63,10 @@ export default {
 .foreground .page-bar {
   border-bottom: 0;
 }
-
+.main-article-img{
+  min-height: 320px;
+  object-fit: cover;
+}
 .headline {
   padding: 3em 0 0;
 }
