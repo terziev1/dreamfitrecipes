@@ -66,13 +66,15 @@ export default {
 .home.header {
   overflow: hidden;
   position: relative;
-  height: 300px;
+  height: 360px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 40px;
 }
 .home.header img{
   height: 100%;
+
 }
 .page-info {
   display: flex;
