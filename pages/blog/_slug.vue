@@ -66,6 +66,11 @@ export default {
   align-items: center;
   justify-content: center;
 }
+@media(max-width:640px){
+  .article.header{
+    padding: 0 !important;
+  }
+}
 .main-article-img{
   min-height: 320px;
   object-fit: cover;
