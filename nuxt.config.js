@@ -94,7 +94,7 @@ const config = {
           // map entries to URLs
           ...entries.items.map(entry => `/blog/${entry.fields.slug}`),
           // map all possible tags to URLs
-          // ...postType.fields.find(field => field.id === 'tags').items.validations[0].in.map(tag => `/tags/${tag}`)
+          ...postType.fields.find(field => field.id === 'tags').items.validations[0].map(tag => `/tags/${tag}`)
         ]
       })
     }
