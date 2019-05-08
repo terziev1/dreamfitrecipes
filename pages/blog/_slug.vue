@@ -18,13 +18,21 @@
     </header>
 
     <section class="body-container">
-      <main class="wrapper">
+      <main class="wrapper small-wrapper">
         <div class="headline">
           <time class="tiny">{{ ( new Date(post.fields.publishDate)).toDateString() }}</time>
           <h1>{{ post.fields.title }}</h1>
         </div>
         <div class="copy">
           <vue-markdown>{{post.fields.body}}</vue-markdown>
+        </div>
+        <div class="images">
+          <div class="image" v-for="(img,i ) in post.fields.images" :key="i">
+            <span>{{img.fields.description}}</span>
+            <img  :src="img.fields.file.url" alt="" >
+
+          </div>
+
         </div>
       </main>
     </section>
@@ -73,7 +81,7 @@ export default {
 }
 
 .copy {
-  padding-bottom: 7em;
+  padding-bottom: 4em;
 }
 
 .copy *:not(div) {
@@ -87,11 +95,39 @@ export default {
 .copy ul {
   margin: 0;
   padding-left: 1em;
-  list-style: disc;
+  list-style: none;
 }
 
 .copy li {
   margin: 0;
+  position: relative;
+  padding-left: 8px
 }
+.copy li:before{
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: -16px;
+  top: 4px;
+  background: url('/orange.svg') no-repeat;
+}
+.small-wrapper{
+  max-width: 768px;
+}
+.images{
+  width: 100%;
+  padding-bottom: 4em;
 
+}
+.images img {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+.images span {
+  display: block;
+  margin-bottom: 10px;
+}
 </style>

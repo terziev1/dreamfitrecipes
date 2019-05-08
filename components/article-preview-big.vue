@@ -33,7 +33,7 @@ export default {
 <style scoped>
 article{
     display: flex;
-    height: 240px;
+    height: 300px;
     width: 100%;
     margin-bottom: 2em;
     border-bottom: 1px solid #ddd;
@@ -45,6 +45,8 @@ article{
     display: block;
     height: 100%;
     width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
   }
 
   .thumbnail-wrapper {
@@ -59,7 +61,7 @@ article{
 
   .title {
     text-decoration: none;
-    font-size: 22px;
+    font-size: 28px;
     color: #373F49;
   }
   time{
@@ -76,14 +78,15 @@ article{
     color: #A0A0A0;
     text-decoration: none;
     display: inline-block;
-    padding: .33333rem .5rem;
+    padding: 4px 6px;
     line-height: 1;
-    border-radius: 2px;
+    border-radius: 3px;
     border: 1px solid #A0A0A0;
     margin-right: .5em;
   }
   .tag{
     margin-bottom: .5em;
+    font-size: 14px
 
   }
   .tag:active,

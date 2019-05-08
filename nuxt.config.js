@@ -18,14 +18,14 @@ const config = {
   ** Headers of the page
   */
   head: {
-    title: 'Custom app with Contentful',
+    title: 'DreamFitRecipes',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Custom app in under 5 minutes' }
+      { hid: 'description', name: 'description', content: 'DreamFitRecipes health blog' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
+      { rel: 'icon', type: 'image/x-icon', href: '/logo.png' },
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/minireset.css/0.0.2/minireset.min.css' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Caveat|Open+Sans:400,700&amp;subset=cyrillic,cyrillic-ext' }
     ]

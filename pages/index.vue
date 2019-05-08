@@ -16,8 +16,13 @@
           </ul>
         </div>
         <div class="page-info">
-          <img :src="person.fields.image.fields.file.url" alt>
+          <div class="page-img">
+            <img :src="person.fields.image.fields.file.url" alt>
+          </div>
           <p>{{ person.fields.shortBio }}</p>
+          <a href="https://www.instagram.com/dreamfitrecipes/">
+            <img src="/instagram.svg" width="30px" alt="">
+          </a>
         </div>
       </div>
     </section>
@@ -75,17 +80,24 @@ export default {
   justify-content: flex-end;
   flex-direction: column;
   height: 100%;
-  flex-basis: 40%
+  flex-basis: 30%
+}
+.page-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .page-info p {
   width: 100%;
   object-fit: contain;
+  text-align: center;
+  margin-bottom: 16px;
 }
 .item-list-wrapper{
   display: flex;
 }
 .item-list-container{
-  flex-basis: 60%;
+  flex-basis: 70%;
 }
 
 h2 {
@@ -104,7 +116,7 @@ h2 {
 }
 @media(max-width:640px){
 .item-list-wrapper{
-  flex-wrap: wrap-reverse
+  flex-wrap: wrap
 }
 .page-info{
   flex-basis: 100%;
