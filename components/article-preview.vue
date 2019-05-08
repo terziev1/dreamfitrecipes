@@ -47,14 +47,14 @@ export default {
   }
   .tag{
     margin-bottom: .5em;
-
+    font-size: 14px;
   }
   .tag:link,
   .tag:visited {
     color: #A0A0A0;
     text-decoration: none;
     display: inline-block;
-    padding: .33333rem .5rem;
+    padding: 4px 6px;
     line-height: 1;
     border-radius: 2px;
     border: 1px solid #A0A0A0;
