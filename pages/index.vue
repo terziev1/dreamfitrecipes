@@ -66,7 +66,7 @@ export default {
 .home.header {
   overflow: hidden;
   position: relative;
-  height: 360px;
+  height: 420px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,6 +74,16 @@ export default {
 }
 .home.header img{
   height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+@media(max-width:640px){
+  .home.home.header{
+    height: auto;;
+  }
+.home.header img{
+  height: auto;;
+}
 
 }
 .page-info {
