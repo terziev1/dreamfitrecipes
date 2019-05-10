@@ -6,7 +6,7 @@
       </a>
       <ul class="menu">
         <li>
-          <nuxt-link to="/">Начало</nuxt-link>
+          <nuxt-link to="/about">За мен</nuxt-link>
         </li>
         <li>
           <nuxt-link to="/blog">Всички рецепти</nuxt-link>
@@ -47,6 +47,9 @@ display: flex;
 }
 .menu li {
   padding: 12px;
+}
+.menu li:hover a{
+  color:#72AC56;
 }
 .menu a {
   text-decoration: none;

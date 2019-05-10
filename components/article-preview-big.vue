@@ -43,7 +43,8 @@ article{
     margin-right: 0.5em;
     display: block;
     width: 100%;
-    height: auto;
+    height: 300px;
+    object-fit: cover;
     border-radius: 4px;
   }
 
@@ -59,7 +60,7 @@ article{
   .title {
     text-decoration: none;
     font-size: 28px;
-    color: #373F49;
+    color: #E6A73E;
   }
   time{
     font-size: 14px;

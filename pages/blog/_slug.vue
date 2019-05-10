@@ -77,10 +77,12 @@ export default {
 }
 .headline {
   padding: 3em 0 0;
+
 }
 
 .headline h1 {
-  font-size: 42px
+  font-size: 42px;
+  color:#E6A73E;
 }
 @media(max-width:640px){
 .headline h1 {
@@ -90,6 +92,7 @@ export default {
 }
 .copy {
   padding-bottom: 4em;
+
 }
 
 .copy *:not(div) {

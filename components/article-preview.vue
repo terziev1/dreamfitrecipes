@@ -35,7 +35,7 @@ export default {
   .title {
     text-decoration: none;
     font-size: 22px;
-    color: #373F49;
+    color: #E6A73E;
   }
   time{
     font-size: 14px;

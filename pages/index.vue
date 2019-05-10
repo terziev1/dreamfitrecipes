@@ -20,6 +20,7 @@
             <img :src="person.fields.image.fields.file.url" alt>
           </div>
           <p>{{ person.fields.shortBio }}</p>
+          <a href="/about" class="readmore-btn">Прочети повече</a>
           <a href="https://www.instagram.com/dreamfitrecipes/">
             <img src="/instagram.svg" width="30px" alt="">
           </a>
@@ -103,7 +104,7 @@ export default {
   width: 100%;
   object-fit: contain;
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 .item-list-wrapper{
   display: flex;
@@ -144,4 +145,12 @@ h2{
   margin-left: 5px;
 }
 }
+.readmore-btn{
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-style: italic;
+  color:#72AC56;
+  text-decoration: underline;
+}
+.readmore-btn:after { content:"\00bb"; }
 </style>
