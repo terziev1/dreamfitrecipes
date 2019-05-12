@@ -21,9 +21,15 @@
           </div>
           <p>{{ person.fields.shortBio }}</p>
           <a href="/about" class="readmore-btn">Прочети повече</a>
-          <a href="https://www.instagram.com/dreamfitrecipes/">
-            <img src="/instagram.svg" width="30px" alt="">
-          </a>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/dreamfitrecipes/">
+              <img src="/instagram.svg" width="30px" alt="">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100002211133619">
+              <img src="/facebook.svg" width="30px" alt="">
+            </a>
+          </div>
+
         </div>
       </div>
     </section>
@@ -153,4 +159,10 @@ h2{
   text-decoration: underline;
 }
 .readmore-btn:after { content:"\00bb"; }
+.social-icons{
+  display: flex;
+}
+.social-icons a {
+  margin: 0 10px;
+}
 </style>
