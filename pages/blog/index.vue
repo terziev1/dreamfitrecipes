@@ -60,6 +60,7 @@ h2 span{
 }
 .items-list{
   display: flex;
+  flex-wrap: wrap;
 }
 
 .item{
