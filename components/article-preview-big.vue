@@ -2,7 +2,7 @@
   <article>
     <nuxt-link class="thumbnail-wrapper" :to="{ name: 'blog-slug', params: { slug: post.fields.slug }}">
     <img class="thumbnail"
-      :src="post.fields.heroImage.fields.file.url"
+      :src="`${post.fields.heroImage.fields.file.url}?q=80`"
 
     >
     </nuxt-link>
