@@ -5,6 +5,7 @@
   "author": "Kostadin Terziev",
   "private": true,
   "dependencies": {
+    "@nuxtjs/google-analytics": "^2.2.0",
     "contentful": "^4.3.0",
     "contentful-management": "^3.4.0",
     "netlify-cli": "^2.11.15",

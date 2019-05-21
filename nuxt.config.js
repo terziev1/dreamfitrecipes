@@ -69,6 +69,11 @@ const config = {
     '~/plugins/contentful'
   ],
 
+  modules: [
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-140629774-1'
+    }]
+  ],
   /*
   ** ᕕ( ᐛ )ᕗ CTF-BLOG-IN-5-MINUTES
   ** Get all blog posts from Contentful
