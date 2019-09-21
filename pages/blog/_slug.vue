@@ -24,7 +24,11 @@
           </div>
 
         </div>
+          <div class="comments">
+            <vue-disqus shortname="dreamfit-recipes" :identifier="post.id" url="https://dreamfit.recipes/"></vue-disqus>
+          </div>
       </main>
+
     </section>
 
   </div>
