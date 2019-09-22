@@ -57,7 +57,7 @@ export default {
   components: {
     Navigation,
     VueMarkdown
-  },
+  }
 }
 </script>
 
