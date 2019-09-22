@@ -25,7 +25,8 @@
 
         </div>
           <div class="comments">
-            <vue-disqus shortname="dreamfit-recipes" :identifier="post.id" url="https://dreamfit.recipes/"></vue-disqus>
+
+            <vue-disqus shortname="dreamfit-recipes" :url="`https://dreamfit.recipes/blog/post.fields.slug`" :identifier="post.fields.slug"></vue-disqus>
           </div>
       </main>
 
@@ -56,7 +57,7 @@ export default {
   components: {
     Navigation,
     VueMarkdown
-  }
+  },
 }
 </script>
 
